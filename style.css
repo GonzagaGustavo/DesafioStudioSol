@@ -34,3 +34,54 @@ button {
 hr {
     width: 80%;
 }
+.display {
+    height: 300px;
+    width: 200px;
+    margin: auto;
+    position: relative;
+}
+.display div {
+    border-radius: 20px;
+    position: absolute;
+}
+.um {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+}
+.dois {
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 50%;
+}
+.tres {
+    bottom: 0;
+    right: 0;
+    width: 40px;
+    height: 50%;
+}
+.quatro {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+}
+.cinco {
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 50%;
+}
+.seis {
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 50%;
+}
+.sete {
+    width: 100%;
+    height: 45px;
+    top: 44%;
+}
