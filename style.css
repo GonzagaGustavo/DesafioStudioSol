@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: #E5E5E5;
+    display: grid;
+    place-items: center;
+}
+.container {
+    background: linear-gradient(#EEEEEE, #FFFFFF);
+    padding: 30px;
+    text-align: center;
+}
+h1 {
+    background: linear-gradient(#EF6C00, #DB6300);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+input {
+    padding: 10px;
+    border: #CFCFCF solid 1px;
+    border-radius: 5px;
+}
+.input:focus {
+    border: #FF6600 solid 1px;
+}
+button {
+    height: 36px;
+    cursor: pointer;
+    background: linear-gradient(#EF6C00, #C0661C);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+}
+hr {
+    width: 80%;
+}
