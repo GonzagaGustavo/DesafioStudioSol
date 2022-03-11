@@ -4,12 +4,8 @@ const resposta = document.querySelector("#resposta");
 const input = document.querySelector("input");
 const button = document.querySelector("button");
 const display = document.querySelector(".display");
-const led2 = document.querySelector(".display2")
-const led3 = document.querySelector(".display3")
-
-Number[0] = zero("#ddddd", display)
-Number[1] = um("#ddddd", display)
-Number[2] = dois("#ddddd", display)
+const led2 = document.querySelector(".display2");
+const led3 = document.querySelector(".display3");
 //Pegando o valor dos números por meio da URL disponibilizada
 function getData(url) {
   let req = new XMLHttpRequest();
@@ -23,31 +19,51 @@ let data = JSON.parse(
 
 //Teste para ver se as resposta estão vindo corretamente
 console.log(data);
-0
+
 //mostrando na tela
 if (!data.StatusCode) {
   if (data.value > 9) {
     if (data.value > 99) {
-      display2()
+      display2();
       display3();
     } else {
       display2();
     }
   }
-  
+  const value = 511;
+  //Verificando o primeiro numero
+  if (`${value}`.substring(0, 1) == "1") {
+    um("#262A34", display);
+  } else if(`${value}`.substring(0, 1) == "2") {
+    dois("#262A34", display)
+  } else if(`${value}`.substring(0, 1) == "3") {
+    tres("#262A34", display)
+  } else if(`${value}`.substring(0, 1) == "4") {
+    quatro("#262A34", display)
+  } else if(`${value}`.substring(0, 1) == "5") {
+    cinco("#262A34", display)
+  }
+  //Verificando o segundo numero
+  if (`${value}`.substring(1, 2) == "1") {
+    um("#262A34", led2);
+  }
+  //Verificando o terceiro numero
+  if (`${value}`.substring(2, 3) == "1") {
+    um("#262A34", led3);
+  }
 } else {
-  display2()
-  display3()
+  display2();
+  display3();
   //Mundando os estilos
   button.style.background = "#DDDDDD";
   input.style.backgroundColor = "#F5F5F5";
-  resposta.style.color = "#CC3300"
+  resposta.style.color = "#CC3300";
   // Desabilitando o botão e os inputs
   button.disabled = true;
   input.disabled = true;
   //Mostrando os dados do erro na tela
   resposta.innerHTML = "ERROR";
-  cinco("#CC3300", display), zero("#CC3300", led2), dois("#CC3300", led3)
+  cinco("#CC3300", display), zero("#CC3300", led2), dois("#CC3300", led3);
 }
 //Display de 7 segmentos
 function display2() {
@@ -90,7 +106,7 @@ function zero(color, render) {
   render.appendChild(elem6);
 }
 
-function um(color) {
+function um(color, render) {
   const elem2 = document.createElement("div");
   const elem3 = document.createElement("div");
 
@@ -100,8 +116,8 @@ function um(color) {
   elem2.style.backgroundColor = color;
   elem3.style.backgroundColor = color;
 
-  display.appendChild(elem2);
-  display.appendChild(elem3);
+  render.appendChild(elem2);
+  render.appendChild(elem3);
 }
 
 function dois(color, render) {
