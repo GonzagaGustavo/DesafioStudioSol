@@ -45,43 +45,56 @@ hr {
     position: absolute;
 }
 .um {
+    margin: 0;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 95%;
     height: 40px;
 }
 .dois {
+    margin: 0;
     top: 0;
     right: 0;
     width: 40px;
     height: 50%;
 }
 .tres {
+    margin: 0;
     bottom: 0;
     right: 0;
     width: 40px;
     height: 50%;
 }
 .quatro {
+    margin: 0;
     bottom: 0;
     left: 0;
-    width: 100%;
+    width: 95%;
     height: 40px;
 }
 .cinco {
+    margin: 0;
     top: 0;
     left: 0;
     width: 40px;
     height: 50%;
 }
 .seis {
+    margin: 0;
     bottom: 0;
     left: 0;
     width: 40px;
     height: 50%;
 }
 .sete {
-    width: 100%;
+    margin: 0;
+    width: 95%;
     height: 45px;
     top: 44%;
+}
+.flex {
+    display: flex;
+}
+.flex div {
+    margin: 5px;
 }
