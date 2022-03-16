@@ -40,6 +40,7 @@ function verifyNum() {
     btnRefresh.style.display = "flex";
     //Tirando o valor do input
     input.value = "";
+    //Chamando a função com a cor verde de parametro
     exibindo("#32BF00");
   }
 }
@@ -62,6 +63,7 @@ function exibindo(color) {
 
     //Verificando o primeiro numero
     if (`${value}`.substring(0, 1) == "0") {
+      //Se tiver cor nos parametros ira mostrar, se nao tiver ira mostrar a cor que esta ali
       zero(color ? color : "#262A34", display);
     } else if (`${value}`.substring(0, 1) == "1") {
       um(color ? color : "#262A34", display);
@@ -227,32 +229,32 @@ function um(color, render) {
 function dois(color, render) {
   const elem1 = document.createElement("div");
   const elem2 = document.createElement("div");
-  const elem3 = document.createElement("div")
-  const elem5 = document.createElement("div")
+  const elem3 = document.createElement("div");
+  const elem5 = document.createElement("div");
   const elem7 = document.createElement("div");
   const elem6 = document.createElement("div");
   const elem4 = document.createElement("div");
 
   elem1.classList.add("um");
   elem2.classList.add("dois");
-  elem3.classList.add("tres")
-  elem5.classList.add("cinco")
+  elem3.classList.add("tres");
+  elem5.classList.add("cinco");
   elem7.classList.add("sete");
   elem6.classList.add("seis");
   elem4.classList.add("quatro");
 
   elem1.style.backgroundColor = color;
   elem2.style.backgroundColor = color;
-  elem3.style.backgroundColor = "#DDDDDD"
-  elem5.style.backgroundColor = "#DDDDDD"
+  elem3.style.backgroundColor = "#DDDDDD";
+  elem5.style.backgroundColor = "#DDDDDD";
   elem7.style.backgroundColor = color;
   elem6.style.backgroundColor = color;
   elem4.style.backgroundColor = color;
 
   render.appendChild(elem1);
   render.appendChild(elem2);
-  render.appendChild(elem3)
-  render.appendChild(elem5)
+  render.appendChild(elem3);
+  render.appendChild(elem5);
   render.appendChild(elem7);
   render.appendChild(elem6);
   render.appendChild(elem4);
@@ -263,8 +265,8 @@ function tres(color, render) {
   const elem2 = document.createElement("div");
   const elem3 = document.createElement("div");
   const elem4 = document.createElement("div");
-  const elem5 = document.createElement("div")
-  const elem6 = document.createElement("div")
+  const elem5 = document.createElement("div");
+  const elem6 = document.createElement("div");
   const elem7 = document.createElement("div");
 
   elem1.classList.add("um");
@@ -287,18 +289,18 @@ function tres(color, render) {
   render.appendChild(elem2);
   render.appendChild(elem3);
   render.appendChild(elem4);
-  render.appendChild(elem5)
-  render.appendChild(elem6)
+  render.appendChild(elem5);
+  render.appendChild(elem6);
   render.appendChild(elem7);
 }
 
 function quatro(color, render) {
-  const elem1 = document.createElement("div")
+  const elem1 = document.createElement("div");
   const elem2 = document.createElement("div");
   const elem3 = document.createElement("div");
-  const elem4 = document.createElement("div")
+  const elem4 = document.createElement("div");
   const elem5 = document.createElement("div");
-  const elem6 = document.createElement("div")
+  const elem6 = document.createElement("div");
   const elem7 = document.createElement("div");
 
   elem1.classList.add("um");
@@ -317,12 +319,12 @@ function quatro(color, render) {
   elem6.style.backgroundColor = "#DDDDDD";
   elem7.style.backgroundColor = color;
 
-  render.appendChild(elem1)
+  render.appendChild(elem1);
   render.appendChild(elem2);
   render.appendChild(elem3);
-  render.appendChild(elem4)
+  render.appendChild(elem4);
   render.appendChild(elem5);
-  render.appendChild(elem6)
+  render.appendChild(elem6);
   render.appendChild(elem7);
 }
 
@@ -352,11 +354,11 @@ function cinco(color, render) {
   elem7.style.backgroundColor = color;
 
   render.appendChild(elem1);
-  render.appendChild(elem2)
+  render.appendChild(elem2);
   render.appendChild(elem3);
   render.appendChild(elem4);
   render.appendChild(elem5);
-  render.appendChild(elem6)
+  render.appendChild(elem6);
   render.appendChild(elem7);
 }
 
@@ -422,10 +424,10 @@ function sete(color, render) {
   render.appendChild(elem1);
   render.appendChild(elem2);
   render.appendChild(elem3);
-  render.appendChild(elem4)
-  render.appendChild(elem5)
-  render.appendChild(elem6)
-  render.appendChild(elem7)
+  render.appendChild(elem4);
+  render.appendChild(elem5);
+  render.appendChild(elem6);
+  render.appendChild(elem7);
 }
 function oito(color, render) {
   //Criando os elementos
@@ -499,4 +501,16 @@ function nove(color, render) {
 function refresh() {
   window.location.reload();
 }
+//Fazendo o botão de enviar funcionar quando aperta enter
+document.addEventListener(
+  "keypress",
+  (e) => {
+    if (e.which == 13) {
+      verifyNum();
+    }
+  },
+  false
+);
+
+//Chamando a função exibindo para mostrar os numeros na tela
 exibindo();

@@ -1,187 +1,143 @@
 body {
-    margin: 0;
-    height: 100vh;
-    background: linear-gradient(#EEEEEE, #FFFFFF);
-    text-align: center;
-    display: grid;
-    place-items: center;
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(#eeeeee, #ffffff);
+  text-align: center;
+  display: grid;
+  place-items: center;
 }
 h1 {
-    background: linear-gradient(#EF6C00, #DB6300);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  background: linear-gradient(#ef6c00, #db6300);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .form {
-    margin: 10%;
+  margin: 10%;
 }
 input {
-    padding: 10px;
-    border: #CFCFCF solid 1px;
-    border-radius: 5px;
+  padding: 10px;
+  border: #cfcfcf solid 1px;
+  border-radius: 5px;
 }
 input:focus {
-    border: #FF6600 solid 1px;
+  border: #ff6600 solid 1px;
 }
 .enviar {
-    height: 36px;
-    cursor: pointer;
-    background: linear-gradient(#EF6C00, #C0661C);
-    color: #FFFFFF;
-    border: none;
-    border-radius: 5px;
+  height: 36px;
+  cursor: pointer;
+  background: linear-gradient(#ef6c00, #c0661c);
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
 }
 hr {
-    width: 80%;
+  width: 80%;
 }
 .display {
-    display: flex;
-    height: 300px;
-    width: 200px;
-    margin: auto;
-    position: relative;
+  display: flex;
+  height: 300px;
+  width: 200px;
+  margin: auto;
+  position: relative;
 }
 .display div {
-    border-radius: 20px;
-    position: absolute;
+  border-radius: 20px;
+  position: absolute;
 }
 .um {
-    margin: auto;
-    top: 0;
-    left: 15%;
-    width: 64%;
-    height: 10%;
+  margin: auto;
+  top: 0;
+  left: 15%;
+  width: 64%;
+  height: 10%;
 }
 .dois {
-    margin: 0;
-    top: 6%;
-    right: 0;
-    width: 17%;
-    height: 40%;
+  margin: 0;
+  top: 6%;
+  right: 0;
+  width: 17%;
+  height: 40%;
 }
 .tres {
-    margin: 0;
-    bottom: 6%;
-    right: 0;
-    width: 17%;
-    height: 40%;
+  margin: 0;
+  bottom: 6%;
+  right: 0;
+  width: 17%;
+  height: 40%;
 }
 .quatro {
-    margin: 0;
-    bottom: 0;
-    left: 15%;
-    width: 64%;
-    height: 10%;
+  margin: 0;
+  bottom: 0;
+  left: 15%;
+  width: 64%;
+  height: 10%;
 }
 .cinco {
-    margin: 0;
-    top: 6%;
-    left: 0;
-    width: 17%;
-    height: 40%;
+  margin: 0;
+  top: 6%;
+  left: 0;
+  width: 17%;
+  height: 40%;
 }
 .seis {
-    margin: 0;
-    bottom: 6%;
-    left: 0;
-    width: 17%;
-    height: 40%;
+  margin: 0;
+  bottom: 6%;
+  left: 0;
+  width: 17%;
+  height: 40%;
 }
 .sete {
-    margin: 0;
-    width: 64%;
-    height: 10%;
-    top: 44%;
-    left: 15%;
+  margin: 0;
+  width: 64%;
+  height: 10%;
+  top: 44%;
+  left: 15%;
 }
 .flex {
-    display: flex;
-    margin-left: 0;
+  display: flex;
+  margin-left: 0;
 }
 .flex div {
-    margin: 5px;
+  margin: 5px;
 }
 .newgame {
-    display: none;
-    color: #FFFFFF;
-    font-size: 12px;
-    height: 42px;
-    width: 130px;
-    margin: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    align-items: center;
-    background: linear-gradient(#434854, #9E9E9E);
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
+  display: none;
+  color: #ffffff;
+  font-size: 12px;
+  height: 42px;
+  width: 130px;
+  margin: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  background: linear-gradient(#434854, #9e9e9e);
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
 }
 .tam {
-    font-size: 16px;
+  font-size: 16px;
 }
-@media only screen and (max-width:632px) {
-    body {
-        display: flex;
-        flex-direction: column;
-    }
-    .newgame {
-        height: 30%;
-        margin: 5%;
-    }
-    .display {
-        display: flex;
-        height: 50%;
-        width: 30%;
-        margin: auto;
-        position: relative;
-    }
-    .flex {
-        height: 300%;
-        width: 100%;
-        justify-content: center;
-    }
-    .um {
-        top: 0;
-        left: 0;
-        width: 95%;
-        height: 40px;
-    }
-    .dois {
-        top: 0;
-        right: 0;
-        width: 40px;
-        height: 50%;
-    }
-    .tres {
-        bottom: 0;
-        right: 0;
-        width: 40px;
-        height: 50%;
-    }
-    .quatro {
-        margin: 0;
-        bottom: 0;
-        left: 0;
-        width: 95%;
-        height: 40px;
-    }
-    .cinco {
-        margin: 0;
-        top: 0;
-        left: 0;
-        width: 40px;
-        height: 50%;
-    }
-    .seis {
-        margin: 0;
-        bottom: 0;
-        left: 0;
-        width: 40px;
-        height: 50%;
-    }
-    .sete {
-        margin: 0;
-        width: 95%;
-        height: 45px;
-        top: 44%;
-    }
+/* Deixando o site responsivo */
+@media only screen and (max-width: 632px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  .newgame {
+    height: 30%;
+    margin: 5%;
+  }
+  .display {
+    display: flex;
+    height: 50%;
+    width: 30%;
+    margin: auto;
+    position: relative;
+  }
+  .flex {
+    height: 300%;
+    width: 100%;
+    justify-content: center;
+  }
 }
